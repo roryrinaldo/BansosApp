@@ -1,0 +1,235 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <!-- Header Section -->
+    <RelativeLayout
+        android:id="@+id/header_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/bansos"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Putra Mahesa"
+            android:textSize="16sp"
+            android:layout_toStartOf="@id/user_image"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/profile"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp" />
+    </RelativeLayout>
+
+    <!-- Welcome Section -->
+    <RelativeLayout
+        android:id="@+id/welcome_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_section"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/welcome_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WELCOME BACK TO"
+            android:textSize="18sp"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JARI BANSOS"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_below="@id/welcome_text"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <!-- Banner Section -->
+    <RelativeLayout
+        android:id="@+id/banner_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcome_section"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/banner_image"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:src="@drawable/banner1"
+            />
+
+        <TextView
+            android:id="@+id/banner_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Langkah awal atasi kemiskinan"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <!-- ScrollView for Profil Bantuan Section -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/banner_section">
+
+    <LinearLayout
+        android:id="@+id/profil_bantuan_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/banner_section"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/profil_bantuan_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PROFIL BANTUAN"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- PKH Card -->
+        <RelativeLayout
+            android:id="@+id/pkh_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/pkh_logo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/bansos"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/pkh_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PKH"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/pkh_logo"
+                android:layout_marginStart="8dp"
+                android:layout_alignTop="@id/pkh_logo" />
+
+            <TextView
+                android:id="@+id/pkh_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PKH adalah program pemberian bantuan tunai bersyarat yang diberikan kepada keluarga penerima manfaat (KPM) dengan tujuan untuk mengurangi kemiskinan dan meningkatkan kualitas hidup masyarakat."
+                android:textSize="14sp"
+                android:layout_toEndOf="@id/pkh_logo"
+                android:layout_marginStart="8dp"
+                android:layout_below="@id/pkh_title" />
+        </RelativeLayout>
+
+        <!-- BPNT Card -->
+        <RelativeLayout
+            android:id="@+id/bpnt_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/bpnt_logo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/bansos"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/bpnt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BPNT"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/bpnt_logo"
+                android:layout_marginStart="8dp"
+                android:layout_alignTop="@id/bpnt_logo" />
+
+            <TextView
+                android:id="@+id/bpnt_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bantuan Pangan NonTunai (BPNT) merupakan program pemerintah untuk membantu masyarakat miskin dalam bentuk bantuan pangan, berupa beras dan telur."
+                android:textSize="14sp"
+                android:layout_toEndOf="@id/bpnt_logo"
+                android:layout_marginStart="8dp"
+                android:layout_below="@id/bpnt_title" />
+        </RelativeLayout>
+        <!-- BST Card -->
+        <RelativeLayout
+            android:id="@+id/bst_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/bst_logo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/bansos"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/bst_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BST"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/bst_logo"
+                android:layout_marginStart="8dp"
+                android:layout_alignTop="@id/bst_logo" />
+
+            <TextView
+                android:id="@+id/bst_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bantuan Sosial Tunai (BST) adalah bantuan yang bersumber dari APBN yang diberikan kepada keluarga miskin, tidak mampu, dan rentan yang terkena dampak wabah COVID-19."
+                android:textSize="14sp"
+                android:layout_toEndOf="@id/bst_logo"
+                android:layout_marginStart="8dp"
+                android:layout_below="@id/bst_title" />
+        </RelativeLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
